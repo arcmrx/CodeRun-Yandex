@@ -21,15 +21,6 @@ int min_food_weight(int N, int M, std::vector<std::vector<int>> &matrix)
             dp[i][j] = std::min(dp[i - 1][j], dp[i][j - 1]) + matrix[i][j];
         }
     }
-    std::cout << "\n";
-    for (int i = 0; i < N; ++i)
-    {
-        for (int j = 0; j < M; ++j)
-        {
-            std::cout << dp[i][j] << " ";
-        }
-        std::cout << "\n";
-    }
     return dp[N - 1][M - 1];
 }
 
